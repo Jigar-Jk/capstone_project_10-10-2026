@@ -43,5 +43,9 @@ with DAG(
         task_id="silver_layer",
         bash_command=f"{DBT_CMD} build --profiles-dir . --select silver",
     )
+    dbt_gold = BashOperator(
+        task_id="gold_layer",
+        bash_command=f"{DBT_CMD} build --profiles-dir . --select gold",
+    )
 
-upload_file>>copy_into_raw>>dbt_silver
+upload_file>>copy_into_raw>>dbt_silver>>dbt_gold
