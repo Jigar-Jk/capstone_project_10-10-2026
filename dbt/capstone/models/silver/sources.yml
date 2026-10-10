@@ -5,4 +5,4 @@ sources:
     database: CAPSTONE_DB
     schema: RAW
     tables:
-      - name: raw_banking
+      - name: raw_cricket
