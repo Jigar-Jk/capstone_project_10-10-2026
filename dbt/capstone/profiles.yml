@@ -1,0 +1,13 @@
+capstone:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: HJLKEXI-BY85980
+      user: CAPSTONE_SVC
+      role: CAPSTONE_ROLE
+      warehouse: CAPSTONE_WH
+      database: CAPSTONE_DB
+      schema: DBT_DEV
+      private_key_path: /usr/local/airflow/include/keys/rsa_key.p8
+      threads: 4
